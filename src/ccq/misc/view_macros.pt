@@ -73,17 +73,9 @@
           <div class="panel-body">
             <a tal:attributes="href url;
                                title related/title">
-              <h1 tal:define="glyph python:
-                        (related.options('title_glyph_icon') or [''])[0]">
-                <span tal:attributes="class glyph"></span>
-                <span tal:content="related/title" />
-              </h1>
+              <div class="panel-text" 
+                   tal:content="structure related/renderedDescription" />
             </a>
-            <div class="panel-text" 
-                 tal:content="structure related/renderedDescription" />
-            <div class="panel-link">
-              <a tal:attributes="href url">Mehr [...]</a>
-            </div>
           </div>
         </div>
       </div>

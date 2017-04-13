@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html metal:use-macro="view/controller/baseMacros/html">
+
+    <metal:css fill-slot="custom-css">
+      <link rel="stylesheet" type="text/css" 
+            tal:attributes="href string:${resourceBase}custom.css" />
+    </metal:css>
+
+    <metal:img fill-slot="logo">
+      <img class="logo-img" 
+           tal:attributes="src string:${resourceBase}logo.jpg;
+                           alt view/headTitle" /></metal:img>
+
+</html>

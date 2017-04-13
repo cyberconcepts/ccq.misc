@@ -17,7 +17,7 @@
 #
 
 """
-View controller for the CCQ_... skins.
+View controllers for the CCQ_... skins.
 """
 
 from zope.browserpage.viewpagetemplatefile import \
@@ -27,10 +27,17 @@ from cco.skin.r2.controller import Controller as BaseController
 
 
 mainTemplate = ViewPageTemplateFile('main.pt')
+mainTemplateFB = ViewPageTemplateFile('main-fb.pt')
 
 
 class Controller(BaseController):
 
     def setMainPage(self):
         self.view.index = BoundPageTemplate(mainTemplate, self.view)
+
+
+class ControllerFB(BaseController):
+
+    def setMainPage(self):
+        self.view.index = BoundPageTemplate(mainTemplateFB, self.view)
 

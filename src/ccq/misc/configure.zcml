@@ -42,6 +42,28 @@
   <browser:resource name="logo.png" file="fish-60.png"
         layer="ccq.misc.CCQ_FCO" />
 
+  <!-- CCQ_FreeBrass skin -->
+
+  <zope:interface
+        interface="ccq.misc.CCQ_FreeBrass"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="CCQ_FreeBrass" />
+
+  <browser:page name="controller"
+        for="zope.publisher.interfaces.browser.IBrowserView"
+        class="ccq.misc.controller.ControllerFB"
+        permission="zope.Public"
+        layer="ccq.misc.CCQ_FreeBrass" />
+
+  <browser:resource name="favicon.png" file="favicon.png" 
+        layer="ccq.misc.CCQ_FreeBrass" />
+
+  <browser:resource name="logo.jpg" file="tuba-100.jpg"
+        layer="ccq.misc.CCQ_FreeBrass" />
+
+  <browser:resource name="custom.css" file="custom-fb.css"
+        layer="ccq.misc.CCQ_FreeBrass" />
+
   <!-- CCQ_KMatrix skin -->
 
   <zope:interface
