@@ -1,0 +1,19 @@
+/* custom.css */
+
+body {
+    font-size: 16px;
+    color: #111111;
+}
+
+.navbar {
+    background: none;
+    padding: 8px 0;
+}
+
+.breadcrumb {
+    border: none;
+    list-style: outside none none;
+    margin-bottom: 5px;
+    padding: 8px 15px;
+}
+

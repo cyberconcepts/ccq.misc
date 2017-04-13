@@ -1,0 +1,95 @@
+<html i18n:domain="cco.skin.r2">
+
+
+<metal:content define-macro="lobo-main"
+               tal:define="images python:list(item.images)">
+
+  <header class="article-header">
+    <h1 tal:content="item/title" />
+  </header>
+
+  <div class="row"
+         tal:condition="images">
+    <metal:slot define-slot="row-with-image">
+      <div class="col-md-4" style="vertical-align: middle"
+           tal:define="image python:item.getImageData(images[0])">
+        <img class="img-responsive img-rounded"
+             tal:attributes="src image/src" />
+      </div>
+      <div class="col-md-8" style="vertical-align: middle">
+        <div class="panel-header panel">
+          <div class="panel-body">
+            <div tal:content="structure item/renderedText" />
+          </div>
+        </div>
+      </div>
+    </metal:slot>
+  </div>
+
+  <div class="row"
+       tal:condition="not:images">
+    <div class="col-md-12" style="vertical-align: middle">
+      <div class="panel-header panel">
+        <div class="panel-body">
+          <div tal:content="structure item/renderedText" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+</metal:content>
+
+
+<metal:content define-macro="lobo-main2">
+  <metal:macro use-macro="item/template/macros/lobo-main">
+    <metal:slot fill-slot="row-with-image">
+      <div class="col-md-4" style="vertical-align: middle">
+        <div class="panel-header panel">
+          <div class="panel-body">
+            <div tal:content="structure item/renderedText" />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8" style="vertical-align: middle"
+           tal:define="image python:item.getImageData(images[0])">
+        <img class="img-responsive img-rounded"
+             tal:attributes="src image/srcFull" />
+      </div>
+    </metal:slot>
+  </metal:macro>
+</metal:content>
+
+
+
+<metal:content define-macro="lobo-part2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" style="vertical-align: middle"
+           tal:repeat="related item/getChildren">
+        <div tal:define="url python:view.getUrlForTarget(related);
+                         curClass python:
+                            related.context == item.context and ' panel-current' or ''"
+             tal:attributes="class string:panel panel-default$curClass">
+          <div class="panel-body">
+            <a tal:attributes="href url;
+                               title related/title">
+              <h1 tal:define="glyph python:
+                        (related.options('title_glyph_icon') or [''])[0]">
+                <span tal:attributes="class glyph"></span>
+                <span tal:content="related/title" />
+              </h1>
+            </a>
+            <div class="panel-text" 
+                 tal:content="structure related/renderedDescription" />
+            <div class="panel-link">
+              <a tal:attributes="href url">Mehr [...]</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</metal:content>
+
+
+</html>

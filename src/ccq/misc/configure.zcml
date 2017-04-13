@@ -1,0 +1,58 @@
+<configure
+    xmlns:zope="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+  <!-- common stuff -->
+
+  <browser:page name="controller"
+        for="zope.publisher.interfaces.browser.IBrowserView"
+        class="ccq.misc.controller.Controller"
+        permission="zope.Public"
+        layer="ccq.misc.CCQ_Common" />
+
+  <zope:adapter
+        name="lobo_layout"
+        for="loops.interfaces.IConcept
+             ccq.misc.CCQ_Common"
+        provides="zope.interface.Interface"
+        factory="ccq.misc.browser.LoboLayout"
+        permission="zope.View" />
+
+  <zope:adapter
+        name="lobo_layout2"
+        for="loops.interfaces.IConcept
+             ccq.misc.CCQ_Common"
+        provides="zope.interface.Interface"
+        factory="ccq.misc.browser.LoboLayout2"
+        permission="zope.View" />
+
+  <browser:resource name="custom.css" file="custom.css"
+        layer="ccq.misc.CCQ_Common" />
+
+  <!-- CCQ_FCO skin -->
+
+  <zope:interface
+        interface="ccq.misc.CCQ_FCO"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="CCQ_FCO" />
+
+  <browser:resource name="favicon.png" file="fish-16.png" 
+        layer="ccq.misc.CCQ_FCO" />
+
+  <browser:resource name="logo.png" file="fish-60.png"
+        layer="ccq.misc.CCQ_FCO" />
+
+  <!-- CCQ_KMatrix skin -->
+
+  <zope:interface
+        interface="ccq.misc.CCQ_KMatrix"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="CCQ_KMatrix" />
+
+  <browser:resource name="favicon.png" file="matrix-16.png" 
+        layer="ccq.misc.CCQ_KMatrix" />
+
+  <browser:resource name="logo.png" file="matrix-100.png"
+        layer="ccq.misc.CCQ_KMatrix" />
+
+</configure>
