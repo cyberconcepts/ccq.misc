@@ -5,6 +5,14 @@ body {
     color: #111111;
 }
 
+a {
+    color: #1327a7;
+}
+
+.navbar {
+    background: none;
+}
+
 .breadcrumb {
     border: none;
     list-style: outside none none;
