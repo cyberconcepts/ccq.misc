@@ -58,7 +58,7 @@
   <browser:resource name="favicon.png" file="trombone-03-16.png" 
         layer="ccq.misc.CCQ_FreeBrass" />
 
-  <browser:resource name="logo.jpg" file="trombone-04-100.jpg"
+  <browser:resource name="logo.jpg" file="trombone-05-100.jpg"
         layer="ccq.misc.CCQ_FreeBrass" />
 
   <browser:resource name="custom.css" file="custom-fb.css"
