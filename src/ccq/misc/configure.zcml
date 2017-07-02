@@ -36,10 +36,10 @@
         type="zope.publisher.interfaces.browser.IBrowserSkinType"
         name="CCQ_FCO" />
 
-  <browser:resource name="favicon.png" file="fish-16.png" 
+  <browser:resource name="favicon.png" file="fco/fish-16.png" 
         layer="ccq.misc.CCQ_FCO" />
 
-  <browser:resource name="logo.png" file="fish-60.png"
+  <browser:resource name="logo.png" file="fco/fish-60.png"
         layer="ccq.misc.CCQ_FCO" />
 
   <!-- CCQ_FreeBrass skin -->
@@ -55,13 +55,16 @@
         permission="zope.Public"
         layer="ccq.misc.CCQ_FreeBrass" />
 
-  <browser:resource name="favicon.png" file="trombone-03-16.png" 
+  <browser:resource name="favicon.png" file="free-brass/trombone-03-16.png" 
         layer="ccq.misc.CCQ_FreeBrass" />
 
-  <browser:resource name="logo.jpg" file="trombone-05-100.jpg"
+  <browser:resource name="logo.jpg" file="free-brass/tuba-150.jpg"
         layer="ccq.misc.CCQ_FreeBrass" />
 
-  <browser:resource name="custom.css" file="custom-fb.css"
+  <browser:resource name="top-bg.jpg" file="free-brass/atlantik-150.jpg"
+        layer="ccq.misc.CCQ_FreeBrass" />
+
+  <browser:resource name="custom.css" file="free-brass/custom-fb.css"
         layer="ccq.misc.CCQ_FreeBrass" />
 
   <!-- CCQ_KMatrix skin -->
@@ -71,10 +74,10 @@
         type="zope.publisher.interfaces.browser.IBrowserSkinType"
         name="CCQ_KMatrix" />
 
-  <browser:resource name="favicon.png" file="matrix-16.png" 
+  <browser:resource name="favicon.png" file="kmatrix/matrix-16.png" 
         layer="ccq.misc.CCQ_KMatrix" />
 
-  <browser:resource name="logo.png" file="matrix-100.png"
+  <browser:resource name="logo.png" file="kmatrix/matrix-100.png"
         layer="ccq.misc.CCQ_KMatrix" />
 
 </configure>

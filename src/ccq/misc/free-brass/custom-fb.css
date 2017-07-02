@@ -11,7 +11,7 @@ a {
 }
 
 .navbar {
-    background: none;
+    background: url(/++skin++CCQ_FreeBrass/@@/top-bg.jpg);
 }
 
 .breadcrumb {

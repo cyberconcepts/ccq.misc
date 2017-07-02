@@ -8,6 +8,7 @@
 
     <metal:img fill-slot="logo">
       <img class="logo-img" 
+           style="height: 100px; margin: 18px; margin-left: 0; padding: 2px; background-color: White; border-radius: 5px"
            tal:attributes="src string:${resourceBase}logo.jpg;
                            alt view/headTitle" /></metal:img>
 

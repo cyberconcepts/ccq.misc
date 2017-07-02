@@ -27,7 +27,7 @@ from cco.skin.r2.controller import Controller as BaseController
 
 
 mainTemplate = ViewPageTemplateFile('main.pt')
-mainTemplateFB = ViewPageTemplateFile('main-fb.pt')
+mainTemplateFB = ViewPageTemplateFile('free-brass/main-fb.pt')
 
 
 class Controller(BaseController):
